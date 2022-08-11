@@ -1,0 +1,11 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory 'c:/Users/Administrator/Desktop/test/f103test_uart1'
+arm-none-eabi-gcc -c -mcpu=cortex-m3 -mthumb   -DUSE_HAL_DRIVER -DSTM32F103xB -ICore/Inc -IDrivers/STM32F1xx_HAL_Driver/Inc -IDrivers/STM32F1xx_HAL_Driver/Inc/Legacy -IDrivers/CMSIS/Device/ST/STM32F1xx/Include -IDrivers/CMSIS/Include -Og -Wall -fdata-sections -ffunction-sections -g -gdwarf-2 -MMD -MP -MF"build/main.d" -Wa,-a,-ad,-alms=build/main.lst Core/Src/main.c -o build/main.o
+ 
+arm-none-eabi-gcc build/main.o build/gpio.o build/usart.o build/stm32f1xx_it.o build/stm32f1xx_hal_msp.o build/stm32f1xx_hal_gpio_ex.o build/stm32f1xx_hal_tim.o build/stm32f1xx_hal_tim_ex.o build/stm32f1xx_hal_uart.o build/stm32f1xx_hal.o build/stm32f1xx_hal_rcc.o build/stm32f1xx_hal_rcc_ex.o build/stm32f1xx_hal_gpio.o build/stm32f1xx_hal_dma.o build/stm32f1xx_hal_cortex.o build/stm32f1xx_hal_pwr.o build/stm32f1xx_hal_flash.o build/stm32f1xx_hal_flash_ex.o build/stm32f1xx_hal_exti.o build/system_stm32f1xx.o build/startup_stm32f103xb.o -mcpu=cortex-m3 -mthumb   -specs=nano.specs -TSTM32F103C8Tx_FLASH.ld  -lc -lm -lnosys  -Wl,-Map=build/f103test_uart1.map,--cref -Wl,--gc-sections -o build/f103test_uart1.elf
+arm-none-eabi-size build/f103test_uart1.elf
+arm-none-eabi-objcopy -O ihex build/f103test_uart1.elf build/f103test_uart1.hex
+ 
+arm-none-eabi-objcopy -O binary -S build/f103test_uart1.elf build/f103test_uart1.bin	
+make.exe: Leaving directory 'c:/Users/Administrator/Desktop/test/f103test_uart1'
+ 
