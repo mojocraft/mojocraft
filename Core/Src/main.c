@@ -55,10 +55,15 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void pressDownCallback(void)
+void pressDownCallback(void *p)
 {
   HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
   printf("button press down. \r\n");
+}
+
+uint8_t readPinLevel()
+{
+  return HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
 }
 /* USER CODE END 0 */
 
@@ -92,7 +97,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-  button_init(&button1, HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_10), 0);
+  button_init(&button1, readPinLevel, 1);
   button_attach(&button1, PRESS_DOWN, pressDownCallback);
   button_start(&button1);
   /* USER CODE END 2 */
