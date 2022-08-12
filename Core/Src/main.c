@@ -15,12 +15,13 @@
  *
  ******************************************************************************
  */
+#include "MultiButton.h"
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "usart.h"
 #include "gpio.h"
-#include "MultiButton.h"
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -57,8 +58,10 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 void pressDownCallback(void *p)
 {
+  static int i = 0;
   HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
-  printf("button press down. \r\n");
+  printf("button press down. %d\r\n", i);
+  i++;
 }
 
 uint8_t readPinLevel()
@@ -106,9 +109,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
     HAL_Delay(5);
     button_ticks();
+    /* USER CODE END WHILE */
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
