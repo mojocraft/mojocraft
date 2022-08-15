@@ -183,6 +183,7 @@ int button_start(struct Button *handle)
 
 	handle->next = head_handle; //传入的结点的尾指针，指向头结点。
 	head_handle = handle;		//头结点变为当前传入的结点。
+	return 0;
 }
 
 /**
