@@ -19,10 +19,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
-
 /* USER CODE BEGIN 0 */
 int __io_putchar(int ch)
 {
+  USART1->SR &= ~(1<<6);
   USART1->DR = (uint8_t)ch;
 	while((USART1->SR & 0x40) == 0);
   return ch;

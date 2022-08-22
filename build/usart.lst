@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 1
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -48,149 +48,154 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 1
   19:Core/Src/usart.c **** /* USER CODE END Header */
   20:Core/Src/usart.c **** /* Includes ------------------------------------------------------------------*/
   21:Core/Src/usart.c **** #include "usart.h"
-  22:Core/Src/usart.c **** 
-  23:Core/Src/usart.c **** /* USER CODE BEGIN 0 */
-  24:Core/Src/usart.c **** int __io_putchar(int ch)
-  25:Core/Src/usart.c **** {
-  28              		.loc 1 25 1 view -0
+  22:Core/Src/usart.c **** /* USER CODE BEGIN 0 */
+  23:Core/Src/usart.c **** int __io_putchar(int ch)
+  24:Core/Src/usart.c **** {
+  28              		.loc 1 24 1 view -0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
   31              		@ frame_needed = 0, uses_anonymous_args = 0
   32              		@ link register save eliminated.
+  25:Core/Src/usart.c ****   USART1->SR &= ~(1<<6);
+  33              		.loc 1 25 3 view .LVU1
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 2
+
+
+  34              		.loc 1 25 14 is_stmt 0 view .LVU2
+  35 0000 064B     		ldr	r3, .L3
+  36 0002 1A68     		ldr	r2, [r3]
+  37 0004 22F04002 		bic	r2, r2, #64
+  38 0008 1A60     		str	r2, [r3]
   26:Core/Src/usart.c ****   USART1->DR = (uint8_t)ch;
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 2
-
-
-  33              		.loc 1 26 3 view .LVU1
-  34              		.loc 1 26 16 is_stmt 0 view .LVU2
-  35 0000 C2B2     		uxtb	r2, r0
-  36              		.loc 1 26 14 view .LVU3
-  37 0002 044B     		ldr	r3, .L3
-  38 0004 5A60     		str	r2, [r3, #4]
+  39              		.loc 1 26 3 is_stmt 1 view .LVU3
+  40              		.loc 1 26 16 is_stmt 0 view .LVU4
+  41 000a C2B2     		uxtb	r2, r0
+  42              		.loc 1 26 14 view .LVU5
+  43 000c 5A60     		str	r2, [r3, #4]
   27:Core/Src/usart.c **** 	while((USART1->SR & 0x40) == 0);
-  39              		.loc 1 27 2 is_stmt 1 view .LVU4
-  40              	.L2:
-  41              		.loc 1 27 33 discriminator 1 view .LVU5
-  42              		.loc 1 27 7 discriminator 1 view .LVU6
-  43              		.loc 1 27 15 is_stmt 0 discriminator 1 view .LVU7
-  44 0006 034B     		ldr	r3, .L3
-  45 0008 1B68     		ldr	r3, [r3]
-  46              		.loc 1 27 7 discriminator 1 view .LVU8
-  47 000a 13F0400F 		tst	r3, #64
-  48 000e FAD0     		beq	.L2
+  44              		.loc 1 27 2 is_stmt 1 view .LVU6
+  45              	.L2:
+  46              		.loc 1 27 33 discriminator 1 view .LVU7
+  47              		.loc 1 27 7 discriminator 1 view .LVU8
+  48              		.loc 1 27 15 is_stmt 0 discriminator 1 view .LVU9
+  49 000e 034B     		ldr	r3, .L3
+  50 0010 1B68     		ldr	r3, [r3]
+  51              		.loc 1 27 7 discriminator 1 view .LVU10
+  52 0012 13F0400F 		tst	r3, #64
+  53 0016 FAD0     		beq	.L2
   28:Core/Src/usart.c ****   return ch;
   29:Core/Src/usart.c **** }
-  49              		.loc 1 29 1 view .LVU9
-  50 0010 7047     		bx	lr
-  51              	.L4:
-  52 0012 00BF     		.align	2
-  53              	.L3:
-  54 0014 00380140 		.word	1073821696
-  55              		.cfi_endproc
-  56              	.LFE68:
-  58              		.section	.text._write,"ax",%progbits
-  59              		.align	1
-  60              		.global	_write
-  61              		.syntax unified
-  62              		.thumb
-  63              		.thumb_func
-  64              		.fpu softvfp
-  66              	_write:
-  67              	.LVL1:
-  68              	.LFB69:
+  54              		.loc 1 29 1 view .LVU11
+  55 0018 7047     		bx	lr
+  56              	.L4:
+  57 001a 00BF     		.align	2
+  58              	.L3:
+  59 001c 00380140 		.word	1073821696
+  60              		.cfi_endproc
+  61              	.LFE68:
+  63              		.section	.text._write,"ax",%progbits
+  64              		.align	1
+  65              		.global	_write
+  66              		.syntax unified
+  67              		.thumb
+  68              		.thumb_func
+  69              		.fpu softvfp
+  71              	_write:
+  72              	.LVL1:
+  73              	.LFB69:
   30:Core/Src/usart.c **** 
   31:Core/Src/usart.c **** int _write(int ch, char *ptr, int len)
   32:Core/Src/usart.c **** {
-  69              		.loc 1 32 1 is_stmt 1 view -0
-  70              		.cfi_startproc
-  71              		@ args = 0, pretend = 0, frame = 0
-  72              		@ frame_needed = 0, uses_anonymous_args = 0
-  73              		.loc 1 32 1 is_stmt 0 view .LVU11
-  74 0000 70B5     		push	{r4, r5, r6, lr}
-  75              	.LCFI0:
-  76              		.cfi_def_cfa_offset 16
-  77              		.cfi_offset 4, -16
-  78              		.cfi_offset 5, -12
-  79              		.cfi_offset 6, -8
-  80              		.cfi_offset 14, -4
-  81 0002 0C46     		mov	r4, r1
-  82 0004 1646     		mov	r6, r2
+  74              		.loc 1 32 1 is_stmt 1 view -0
+  75              		.cfi_startproc
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              		.loc 1 32 1 is_stmt 0 view .LVU13
+  79 0000 70B5     		push	{r4, r5, r6, lr}
+  80              	.LCFI0:
+  81              		.cfi_def_cfa_offset 16
+  82              		.cfi_offset 4, -16
+  83              		.cfi_offset 5, -12
+  84              		.cfi_offset 6, -8
+  85              		.cfi_offset 14, -4
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 3
+
+
+  86 0002 0C46     		mov	r4, r1
+  87 0004 1646     		mov	r6, r2
   33:Core/Src/usart.c ****   int DataIdx;
-  83              		.loc 1 33 3 is_stmt 1 view .LVU12
+  88              		.loc 1 33 3 is_stmt 1 view .LVU14
   34:Core/Src/usart.c ****    for (DataIdx = 0; DataIdx < len; DataIdx++)
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 3
-
-
-  84              		.loc 1 34 4 view .LVU13
-  85              	.LVL2:
-  86              		.loc 1 34 17 is_stmt 0 view .LVU14
-  87 0006 0025     		movs	r5, #0
-  88              	.LVL3:
-  89              	.L6:
-  90              		.loc 1 34 22 is_stmt 1 discriminator 1 view .LVU15
-  91              		.loc 1 34 4 is_stmt 0 discriminator 1 view .LVU16
-  92 0008 B542     		cmp	r5, r6
-  93 000a 05DA     		bge	.L9
+  89              		.loc 1 34 4 view .LVU15
+  90              	.LVL2:
+  91              		.loc 1 34 17 is_stmt 0 view .LVU16
+  92 0006 0025     		movs	r5, #0
+  93              	.LVL3:
+  94              	.L6:
+  95              		.loc 1 34 22 is_stmt 1 discriminator 1 view .LVU17
+  96              		.loc 1 34 4 is_stmt 0 discriminator 1 view .LVU18
+  97 0008 B542     		cmp	r5, r6
+  98 000a 05DA     		bge	.L9
   35:Core/Src/usart.c ****    {
   36:Core/Src/usart.c ****       __io_putchar(*ptr++);
-  94              		.loc 1 36 7 is_stmt 1 discriminator 3 view .LVU17
-  95              	.LVL4:
-  96              		.loc 1 36 7 is_stmt 0 discriminator 3 view .LVU18
-  97 000c 14F8010B 		ldrb	r0, [r4], #1	@ zero_extendqisi2
-  98              	.LVL5:
-  99              		.loc 1 36 7 discriminator 3 view .LVU19
- 100 0010 FFF7FEFF 		bl	__io_putchar
- 101              	.LVL6:
+  99              		.loc 1 36 7 is_stmt 1 discriminator 3 view .LVU19
+ 100              	.LVL4:
+ 101              		.loc 1 36 7 is_stmt 0 discriminator 3 view .LVU20
+ 102 000c 14F8010B 		ldrb	r0, [r4], #1	@ zero_extendqisi2
+ 103              	.LVL5:
+ 104              		.loc 1 36 7 discriminator 3 view .LVU21
+ 105 0010 FFF7FEFF 		bl	__io_putchar
+ 106              	.LVL6:
   34:Core/Src/usart.c ****    for (DataIdx = 0; DataIdx < len; DataIdx++)
- 102              		.loc 1 34 37 is_stmt 1 discriminator 3 view .LVU20
+ 107              		.loc 1 34 37 is_stmt 1 discriminator 3 view .LVU22
   34:Core/Src/usart.c ****    for (DataIdx = 0; DataIdx < len; DataIdx++)
- 103              		.loc 1 34 44 is_stmt 0 discriminator 3 view .LVU21
- 104 0014 0135     		adds	r5, r5, #1
- 105              	.LVL7:
+ 108              		.loc 1 34 44 is_stmt 0 discriminator 3 view .LVU23
+ 109 0014 0135     		adds	r5, r5, #1
+ 110              	.LVL7:
   34:Core/Src/usart.c ****    for (DataIdx = 0; DataIdx < len; DataIdx++)
- 106              		.loc 1 34 44 discriminator 3 view .LVU22
- 107 0016 F7E7     		b	.L6
- 108              	.L9:
+ 111              		.loc 1 34 44 discriminator 3 view .LVU24
+ 112 0016 F7E7     		b	.L6
+ 113              	.L9:
   37:Core/Src/usart.c ****    }
   38:Core/Src/usart.c ****    return len;
- 109              		.loc 1 38 4 is_stmt 1 view .LVU23
+ 114              		.loc 1 38 4 is_stmt 1 view .LVU25
   39:Core/Src/usart.c **** }
- 110              		.loc 1 39 1 is_stmt 0 view .LVU24
- 111 0018 3046     		mov	r0, r6
- 112 001a 70BD     		pop	{r4, r5, r6, pc}
- 113              		.loc 1 39 1 view .LVU25
- 114              		.cfi_endproc
- 115              	.LFE69:
- 117              		.section	.text.MX_USART1_UART_Init,"ax",%progbits
- 118              		.align	1
- 119              		.global	MX_USART1_UART_Init
- 120              		.syntax unified
- 121              		.thumb
- 122              		.thumb_func
- 123              		.fpu softvfp
- 125              	MX_USART1_UART_Init:
- 126              	.LFB70:
+ 115              		.loc 1 39 1 is_stmt 0 view .LVU26
+ 116 0018 3046     		mov	r0, r6
+ 117 001a 70BD     		pop	{r4, r5, r6, pc}
+ 118              		.loc 1 39 1 view .LVU27
+ 119              		.cfi_endproc
+ 120              	.LFE69:
+ 122              		.section	.text.MX_USART1_UART_Init,"ax",%progbits
+ 123              		.align	1
+ 124              		.global	MX_USART1_UART_Init
+ 125              		.syntax unified
+ 126              		.thumb
+ 127              		.thumb_func
+ 128              		.fpu softvfp
+ 130              	MX_USART1_UART_Init:
+ 131              	.LFB70:
   40:Core/Src/usart.c **** 
   41:Core/Src/usart.c **** /* USER CODE END 0 */
   42:Core/Src/usart.c **** 
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 4
+
+
   43:Core/Src/usart.c **** UART_HandleTypeDef huart1;
   44:Core/Src/usart.c **** 
   45:Core/Src/usart.c **** /* USART1 init function */
   46:Core/Src/usart.c **** 
   47:Core/Src/usart.c **** void MX_USART1_UART_Init(void)
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 4
-
-
   48:Core/Src/usart.c **** {
- 127              		.loc 1 48 1 is_stmt 1 view -0
- 128              		.cfi_startproc
- 129              		@ args = 0, pretend = 0, frame = 0
- 130              		@ frame_needed = 0, uses_anonymous_args = 0
- 131 0000 08B5     		push	{r3, lr}
- 132              	.LCFI1:
- 133              		.cfi_def_cfa_offset 8
- 134              		.cfi_offset 3, -8
- 135              		.cfi_offset 14, -4
+ 132              		.loc 1 48 1 is_stmt 1 view -0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136 0000 08B5     		push	{r3, lr}
+ 137              	.LCFI1:
+ 138              		.cfi_def_cfa_offset 8
+ 139              		.cfi_offset 3, -8
+ 140              		.cfi_offset 14, -4
   49:Core/Src/usart.c **** 
   50:Core/Src/usart.c ****   /* USER CODE BEGIN USART1_Init 0 */
   51:Core/Src/usart.c **** 
@@ -200,53 +205,53 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 1
   55:Core/Src/usart.c **** 
   56:Core/Src/usart.c ****   /* USER CODE END USART1_Init 1 */
   57:Core/Src/usart.c ****   huart1.Instance = USART1;
- 136              		.loc 1 57 3 view .LVU27
- 137              		.loc 1 57 19 is_stmt 0 view .LVU28
- 138 0002 0A48     		ldr	r0, .L14
- 139 0004 0A4B     		ldr	r3, .L14+4
- 140 0006 0360     		str	r3, [r0]
+ 141              		.loc 1 57 3 view .LVU29
+ 142              		.loc 1 57 19 is_stmt 0 view .LVU30
+ 143 0002 0A48     		ldr	r0, .L14
+ 144 0004 0A4B     		ldr	r3, .L14+4
+ 145 0006 0360     		str	r3, [r0]
   58:Core/Src/usart.c ****   huart1.Init.BaudRate = 115200;
- 141              		.loc 1 58 3 is_stmt 1 view .LVU29
- 142              		.loc 1 58 24 is_stmt 0 view .LVU30
- 143 0008 4FF4E133 		mov	r3, #115200
- 144 000c 4360     		str	r3, [r0, #4]
+ 146              		.loc 1 58 3 is_stmt 1 view .LVU31
+ 147              		.loc 1 58 24 is_stmt 0 view .LVU32
+ 148 0008 4FF4E133 		mov	r3, #115200
+ 149 000c 4360     		str	r3, [r0, #4]
   59:Core/Src/usart.c ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
- 145              		.loc 1 59 3 is_stmt 1 view .LVU31
- 146              		.loc 1 59 26 is_stmt 0 view .LVU32
- 147 000e 0023     		movs	r3, #0
- 148 0010 8360     		str	r3, [r0, #8]
+ 150              		.loc 1 59 3 is_stmt 1 view .LVU33
+ 151              		.loc 1 59 26 is_stmt 0 view .LVU34
+ 152 000e 0023     		movs	r3, #0
+ 153 0010 8360     		str	r3, [r0, #8]
   60:Core/Src/usart.c ****   huart1.Init.StopBits = UART_STOPBITS_1;
- 149              		.loc 1 60 3 is_stmt 1 view .LVU33
- 150              		.loc 1 60 24 is_stmt 0 view .LVU34
- 151 0012 C360     		str	r3, [r0, #12]
+ 154              		.loc 1 60 3 is_stmt 1 view .LVU35
+ 155              		.loc 1 60 24 is_stmt 0 view .LVU36
+ 156 0012 C360     		str	r3, [r0, #12]
   61:Core/Src/usart.c ****   huart1.Init.Parity = UART_PARITY_NONE;
- 152              		.loc 1 61 3 is_stmt 1 view .LVU35
- 153              		.loc 1 61 22 is_stmt 0 view .LVU36
- 154 0014 0361     		str	r3, [r0, #16]
+ 157              		.loc 1 61 3 is_stmt 1 view .LVU37
+ 158              		.loc 1 61 22 is_stmt 0 view .LVU38
+ 159 0014 0361     		str	r3, [r0, #16]
   62:Core/Src/usart.c ****   huart1.Init.Mode = UART_MODE_TX_RX;
- 155              		.loc 1 62 3 is_stmt 1 view .LVU37
- 156              		.loc 1 62 20 is_stmt 0 view .LVU38
- 157 0016 0C22     		movs	r2, #12
- 158 0018 4261     		str	r2, [r0, #20]
+ 160              		.loc 1 62 3 is_stmt 1 view .LVU39
+ 161              		.loc 1 62 20 is_stmt 0 view .LVU40
+ 162 0016 0C22     		movs	r2, #12
+ 163 0018 4261     		str	r2, [r0, #20]
   63:Core/Src/usart.c ****   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
- 159              		.loc 1 63 3 is_stmt 1 view .LVU39
- 160              		.loc 1 63 25 is_stmt 0 view .LVU40
- 161 001a 8361     		str	r3, [r0, #24]
+ 164              		.loc 1 63 3 is_stmt 1 view .LVU41
+ 165              		.loc 1 63 25 is_stmt 0 view .LVU42
+ 166 001a 8361     		str	r3, [r0, #24]
   64:Core/Src/usart.c ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
- 162              		.loc 1 64 3 is_stmt 1 view .LVU41
- 163              		.loc 1 64 28 is_stmt 0 view .LVU42
- 164 001c C361     		str	r3, [r0, #28]
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 5
+
+
+ 167              		.loc 1 64 3 is_stmt 1 view .LVU43
+ 168              		.loc 1 64 28 is_stmt 0 view .LVU44
+ 169 001c C361     		str	r3, [r0, #28]
   65:Core/Src/usart.c ****   if (HAL_UART_Init(&huart1) != HAL_OK)
- 165              		.loc 1 65 3 is_stmt 1 view .LVU43
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 5
-
-
- 166              		.loc 1 65 7 is_stmt 0 view .LVU44
- 167 001e FFF7FEFF 		bl	HAL_UART_Init
- 168              	.LVL8:
- 169              		.loc 1 65 6 view .LVU45
- 170 0022 00B9     		cbnz	r0, .L13
- 171              	.L10:
+ 170              		.loc 1 65 3 is_stmt 1 view .LVU45
+ 171              		.loc 1 65 7 is_stmt 0 view .LVU46
+ 172 001e FFF7FEFF 		bl	HAL_UART_Init
+ 173              	.LVL8:
+ 174              		.loc 1 65 6 view .LVU47
+ 175 0022 00B9     		cbnz	r0, .L13
+ 176              	.L10:
   66:Core/Src/usart.c ****   {
   67:Core/Src/usart.c ****     Error_Handler();
   68:Core/Src/usart.c ****   }
@@ -255,70 +260,70 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 1
   71:Core/Src/usart.c ****   /* USER CODE END USART1_Init 2 */
   72:Core/Src/usart.c **** 
   73:Core/Src/usart.c **** }
- 172              		.loc 1 73 1 view .LVU46
- 173 0024 08BD     		pop	{r3, pc}
- 174              	.L13:
+ 177              		.loc 1 73 1 view .LVU48
+ 178 0024 08BD     		pop	{r3, pc}
+ 179              	.L13:
   67:Core/Src/usart.c ****   }
- 175              		.loc 1 67 5 is_stmt 1 view .LVU47
- 176 0026 FFF7FEFF 		bl	Error_Handler
- 177              	.LVL9:
- 178              		.loc 1 73 1 is_stmt 0 view .LVU48
- 179 002a FBE7     		b	.L10
- 180              	.L15:
- 181              		.align	2
- 182              	.L14:
- 183 002c 00000000 		.word	huart1
- 184 0030 00380140 		.word	1073821696
- 185              		.cfi_endproc
- 186              	.LFE70:
- 188              		.section	.text.HAL_UART_MspInit,"ax",%progbits
- 189              		.align	1
- 190              		.global	HAL_UART_MspInit
- 191              		.syntax unified
- 192              		.thumb
- 193              		.thumb_func
- 194              		.fpu softvfp
- 196              	HAL_UART_MspInit:
- 197              	.LVL10:
- 198              	.LFB71:
+ 180              		.loc 1 67 5 is_stmt 1 view .LVU49
+ 181 0026 FFF7FEFF 		bl	Error_Handler
+ 182              	.LVL9:
+ 183              		.loc 1 73 1 is_stmt 0 view .LVU50
+ 184 002a FBE7     		b	.L10
+ 185              	.L15:
+ 186              		.align	2
+ 187              	.L14:
+ 188 002c 00000000 		.word	huart1
+ 189 0030 00380140 		.word	1073821696
+ 190              		.cfi_endproc
+ 191              	.LFE70:
+ 193              		.section	.text.HAL_UART_MspInit,"ax",%progbits
+ 194              		.align	1
+ 195              		.global	HAL_UART_MspInit
+ 196              		.syntax unified
+ 197              		.thumb
+ 198              		.thumb_func
+ 199              		.fpu softvfp
+ 201              	HAL_UART_MspInit:
+ 202              	.LVL10:
+ 203              	.LFB71:
   74:Core/Src/usart.c **** 
   75:Core/Src/usart.c **** void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
   76:Core/Src/usart.c **** {
- 199              		.loc 1 76 1 is_stmt 1 view -0
- 200              		.cfi_startproc
- 201              		@ args = 0, pretend = 0, frame = 24
- 202              		@ frame_needed = 0, uses_anonymous_args = 0
- 203              		.loc 1 76 1 is_stmt 0 view .LVU50
- 204 0000 10B5     		push	{r4, lr}
- 205              	.LCFI2:
- 206              		.cfi_def_cfa_offset 8
- 207              		.cfi_offset 4, -8
- 208              		.cfi_offset 14, -4
- 209 0002 86B0     		sub	sp, sp, #24
- 210              	.LCFI3:
- 211              		.cfi_def_cfa_offset 32
+ 204              		.loc 1 76 1 is_stmt 1 view -0
+ 205              		.cfi_startproc
+ 206              		@ args = 0, pretend = 0, frame = 24
+ 207              		@ frame_needed = 0, uses_anonymous_args = 0
+ 208              		.loc 1 76 1 is_stmt 0 view .LVU52
+ 209 0000 10B5     		push	{r4, lr}
+ 210              	.LCFI2:
+ 211              		.cfi_def_cfa_offset 8
+ 212              		.cfi_offset 4, -8
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 6
+
+
+ 213              		.cfi_offset 14, -4
+ 214 0002 86B0     		sub	sp, sp, #24
+ 215              	.LCFI3:
+ 216              		.cfi_def_cfa_offset 32
   77:Core/Src/usart.c **** 
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 6
-
-
   78:Core/Src/usart.c ****   GPIO_InitTypeDef GPIO_InitStruct = {0};
- 212              		.loc 1 78 3 is_stmt 1 view .LVU51
- 213              		.loc 1 78 20 is_stmt 0 view .LVU52
- 214 0004 0023     		movs	r3, #0
- 215 0006 0293     		str	r3, [sp, #8]
- 216 0008 0393     		str	r3, [sp, #12]
- 217 000a 0493     		str	r3, [sp, #16]
- 218 000c 0593     		str	r3, [sp, #20]
+ 217              		.loc 1 78 3 is_stmt 1 view .LVU53
+ 218              		.loc 1 78 20 is_stmt 0 view .LVU54
+ 219 0004 0023     		movs	r3, #0
+ 220 0006 0293     		str	r3, [sp, #8]
+ 221 0008 0393     		str	r3, [sp, #12]
+ 222 000a 0493     		str	r3, [sp, #16]
+ 223 000c 0593     		str	r3, [sp, #20]
   79:Core/Src/usart.c ****   if(uartHandle->Instance==USART1)
- 219              		.loc 1 79 3 is_stmt 1 view .LVU53
- 220              		.loc 1 79 16 is_stmt 0 view .LVU54
- 221 000e 0268     		ldr	r2, [r0]
- 222              		.loc 1 79 5 view .LVU55
- 223 0010 174B     		ldr	r3, .L20
- 224 0012 9A42     		cmp	r2, r3
- 225 0014 01D0     		beq	.L19
- 226              	.LVL11:
- 227              	.L16:
+ 224              		.loc 1 79 3 is_stmt 1 view .LVU55
+ 225              		.loc 1 79 16 is_stmt 0 view .LVU56
+ 226 000e 0268     		ldr	r2, [r0]
+ 227              		.loc 1 79 5 view .LVU57
+ 228 0010 174B     		ldr	r3, .L20
+ 229 0012 9A42     		cmp	r2, r3
+ 230 0014 01D0     		beq	.L19
+ 231              	.LVL11:
+ 232              	.L16:
   80:Core/Src/usart.c ****   {
   81:Core/Src/usart.c ****   /* USER CODE BEGIN USART1_MspInit 0 */
   82:Core/Src/usart.c **** 
@@ -346,163 +351,163 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 1
  104:Core/Src/usart.c ****   /* USER CODE END USART1_MspInit 1 */
  105:Core/Src/usart.c ****   }
  106:Core/Src/usart.c **** }
- 228              		.loc 1 106 1 view .LVU56
- 229 0016 06B0     		add	sp, sp, #24
- 230              	.LCFI4:
- 231              		.cfi_remember_state
- 232              		.cfi_def_cfa_offset 8
- 233              		@ sp needed
- 234 0018 10BD     		pop	{r4, pc}
- 235              	.LVL12:
- 236              	.L19:
- 237              	.LCFI5:
- 238              		.cfi_restore_state
-  85:Core/Src/usart.c **** 
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 7
+ 233              		.loc 1 106 1 view .LVU58
+ 234 0016 06B0     		add	sp, sp, #24
+ 235              	.LCFI4:
+ 236              		.cfi_remember_state
+ 237              		.cfi_def_cfa_offset 8
+ 238              		@ sp needed
+ 239 0018 10BD     		pop	{r4, pc}
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 7
 
 
- 239              		.loc 1 85 5 is_stmt 1 view .LVU57
- 240              	.LBB2:
+ 240              	.LVL12:
+ 241              	.L19:
+ 242              	.LCFI5:
+ 243              		.cfi_restore_state
   85:Core/Src/usart.c **** 
- 241              		.loc 1 85 5 view .LVU58
+ 244              		.loc 1 85 5 is_stmt 1 view .LVU59
+ 245              	.LBB2:
   85:Core/Src/usart.c **** 
- 242              		.loc 1 85 5 view .LVU59
- 243 001a 03F55843 		add	r3, r3, #55296
- 244 001e 9A69     		ldr	r2, [r3, #24]
- 245 0020 42F48042 		orr	r2, r2, #16384
- 246 0024 9A61     		str	r2, [r3, #24]
+ 246              		.loc 1 85 5 view .LVU60
   85:Core/Src/usart.c **** 
- 247              		.loc 1 85 5 view .LVU60
- 248 0026 9A69     		ldr	r2, [r3, #24]
- 249 0028 02F48042 		and	r2, r2, #16384
- 250 002c 0092     		str	r2, [sp]
+ 247              		.loc 1 85 5 view .LVU61
+ 248 001a 03F55843 		add	r3, r3, #55296
+ 249 001e 9A69     		ldr	r2, [r3, #24]
+ 250 0020 42F48042 		orr	r2, r2, #16384
+ 251 0024 9A61     		str	r2, [r3, #24]
   85:Core/Src/usart.c **** 
- 251              		.loc 1 85 5 view .LVU61
- 252 002e 009A     		ldr	r2, [sp]
- 253              	.LBE2:
+ 252              		.loc 1 85 5 view .LVU62
+ 253 0026 9A69     		ldr	r2, [r3, #24]
+ 254 0028 02F48042 		and	r2, r2, #16384
+ 255 002c 0092     		str	r2, [sp]
   85:Core/Src/usart.c **** 
- 254              		.loc 1 85 5 view .LVU62
+ 256              		.loc 1 85 5 view .LVU63
+ 257 002e 009A     		ldr	r2, [sp]
+ 258              	.LBE2:
+  85:Core/Src/usart.c **** 
+ 259              		.loc 1 85 5 view .LVU64
   87:Core/Src/usart.c ****     /**USART1 GPIO Configuration
- 255              		.loc 1 87 5 view .LVU63
- 256              	.LBB3:
-  87:Core/Src/usart.c ****     /**USART1 GPIO Configuration
- 257              		.loc 1 87 5 view .LVU64
-  87:Core/Src/usart.c ****     /**USART1 GPIO Configuration
- 258              		.loc 1 87 5 view .LVU65
- 259 0030 9A69     		ldr	r2, [r3, #24]
- 260 0032 42F00402 		orr	r2, r2, #4
- 261 0036 9A61     		str	r2, [r3, #24]
+ 260              		.loc 1 87 5 view .LVU65
+ 261              	.LBB3:
   87:Core/Src/usart.c ****     /**USART1 GPIO Configuration
  262              		.loc 1 87 5 view .LVU66
- 263 0038 9B69     		ldr	r3, [r3, #24]
- 264 003a 03F00403 		and	r3, r3, #4
- 265 003e 0193     		str	r3, [sp, #4]
   87:Core/Src/usart.c ****     /**USART1 GPIO Configuration
- 266              		.loc 1 87 5 view .LVU67
- 267 0040 019B     		ldr	r3, [sp, #4]
- 268              	.LBE3:
+ 263              		.loc 1 87 5 view .LVU67
+ 264 0030 9A69     		ldr	r2, [r3, #24]
+ 265 0032 42F00402 		orr	r2, r2, #4
+ 266 0036 9A61     		str	r2, [r3, #24]
   87:Core/Src/usart.c ****     /**USART1 GPIO Configuration
- 269              		.loc 1 87 5 view .LVU68
+ 267              		.loc 1 87 5 view .LVU68
+ 268 0038 9B69     		ldr	r3, [r3, #24]
+ 269 003a 03F00403 		and	r3, r3, #4
+ 270 003e 0193     		str	r3, [sp, #4]
+  87:Core/Src/usart.c ****     /**USART1 GPIO Configuration
+ 271              		.loc 1 87 5 view .LVU69
+ 272 0040 019B     		ldr	r3, [sp, #4]
+ 273              	.LBE3:
+  87:Core/Src/usart.c ****     /**USART1 GPIO Configuration
+ 274              		.loc 1 87 5 view .LVU70
   92:Core/Src/usart.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 270              		.loc 1 92 5 view .LVU69
+ 275              		.loc 1 92 5 view .LVU71
   92:Core/Src/usart.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
- 271              		.loc 1 92 25 is_stmt 0 view .LVU70
- 272 0042 4FF40073 		mov	r3, #512
- 273 0046 0293     		str	r3, [sp, #8]
+ 276              		.loc 1 92 25 is_stmt 0 view .LVU72
+ 277 0042 4FF40073 		mov	r3, #512
+ 278 0046 0293     		str	r3, [sp, #8]
   93:Core/Src/usart.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
- 274              		.loc 1 93 5 is_stmt 1 view .LVU71
+ 279              		.loc 1 93 5 is_stmt 1 view .LVU73
   93:Core/Src/usart.c ****     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
- 275              		.loc 1 93 26 is_stmt 0 view .LVU72
- 276 0048 0223     		movs	r3, #2
- 277 004a 0393     		str	r3, [sp, #12]
-  94:Core/Src/usart.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 278              		.loc 1 94 5 is_stmt 1 view .LVU73
-  94:Core/Src/usart.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 8
+ 280              		.loc 1 93 26 is_stmt 0 view .LVU74
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 8
 
 
- 279              		.loc 1 94 27 is_stmt 0 view .LVU74
- 280 004c 0323     		movs	r3, #3
- 281 004e 0593     		str	r3, [sp, #20]
+ 281 0048 0223     		movs	r3, #2
+ 282 004a 0393     		str	r3, [sp, #12]
+  94:Core/Src/usart.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 283              		.loc 1 94 5 is_stmt 1 view .LVU75
+  94:Core/Src/usart.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 284              		.loc 1 94 27 is_stmt 0 view .LVU76
+ 285 004c 0323     		movs	r3, #3
+ 286 004e 0593     		str	r3, [sp, #20]
   95:Core/Src/usart.c **** 
- 282              		.loc 1 95 5 is_stmt 1 view .LVU75
- 283 0050 084C     		ldr	r4, .L20+4
- 284 0052 02A9     		add	r1, sp, #8
- 285 0054 2046     		mov	r0, r4
- 286              	.LVL13:
+ 287              		.loc 1 95 5 is_stmt 1 view .LVU77
+ 288 0050 084C     		ldr	r4, .L20+4
+ 289 0052 02A9     		add	r1, sp, #8
+ 290 0054 2046     		mov	r0, r4
+ 291              	.LVL13:
   95:Core/Src/usart.c **** 
- 287              		.loc 1 95 5 is_stmt 0 view .LVU76
- 288 0056 FFF7FEFF 		bl	HAL_GPIO_Init
- 289              	.LVL14:
+ 292              		.loc 1 95 5 is_stmt 0 view .LVU78
+ 293 0056 FFF7FEFF 		bl	HAL_GPIO_Init
+ 294              	.LVL14:
   97:Core/Src/usart.c ****     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
- 290              		.loc 1 97 5 is_stmt 1 view .LVU77
+ 295              		.loc 1 97 5 is_stmt 1 view .LVU79
   97:Core/Src/usart.c ****     GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
- 291              		.loc 1 97 25 is_stmt 0 view .LVU78
- 292 005a 4FF48063 		mov	r3, #1024
- 293 005e 0293     		str	r3, [sp, #8]
+ 296              		.loc 1 97 25 is_stmt 0 view .LVU80
+ 297 005a 4FF48063 		mov	r3, #1024
+ 298 005e 0293     		str	r3, [sp, #8]
   98:Core/Src/usart.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 294              		.loc 1 98 5 is_stmt 1 view .LVU79
+ 299              		.loc 1 98 5 is_stmt 1 view .LVU81
   98:Core/Src/usart.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
- 295              		.loc 1 98 26 is_stmt 0 view .LVU80
- 296 0060 0023     		movs	r3, #0
- 297 0062 0393     		str	r3, [sp, #12]
+ 300              		.loc 1 98 26 is_stmt 0 view .LVU82
+ 301 0060 0023     		movs	r3, #0
+ 302 0062 0393     		str	r3, [sp, #12]
   99:Core/Src/usart.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 298              		.loc 1 99 5 is_stmt 1 view .LVU81
+ 303              		.loc 1 99 5 is_stmt 1 view .LVU83
   99:Core/Src/usart.c ****     HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
- 299              		.loc 1 99 26 is_stmt 0 view .LVU82
- 300 0064 0493     		str	r3, [sp, #16]
+ 304              		.loc 1 99 26 is_stmt 0 view .LVU84
+ 305 0064 0493     		str	r3, [sp, #16]
  100:Core/Src/usart.c **** 
- 301              		.loc 1 100 5 is_stmt 1 view .LVU83
- 302 0066 02A9     		add	r1, sp, #8
- 303 0068 2046     		mov	r0, r4
- 304 006a FFF7FEFF 		bl	HAL_GPIO_Init
- 305              	.LVL15:
- 306              		.loc 1 106 1 is_stmt 0 view .LVU84
- 307 006e D2E7     		b	.L16
- 308              	.L21:
- 309              		.align	2
- 310              	.L20:
- 311 0070 00380140 		.word	1073821696
- 312 0074 00080140 		.word	1073809408
- 313              		.cfi_endproc
- 314              	.LFE71:
- 316              		.section	.text.HAL_UART_MspDeInit,"ax",%progbits
- 317              		.align	1
- 318              		.global	HAL_UART_MspDeInit
- 319              		.syntax unified
- 320              		.thumb
- 321              		.thumb_func
- 322              		.fpu softvfp
- 324              	HAL_UART_MspDeInit:
- 325              	.LVL16:
- 326              	.LFB72:
+ 306              		.loc 1 100 5 is_stmt 1 view .LVU85
+ 307 0066 02A9     		add	r1, sp, #8
+ 308 0068 2046     		mov	r0, r4
+ 309 006a FFF7FEFF 		bl	HAL_GPIO_Init
+ 310              	.LVL15:
+ 311              		.loc 1 106 1 is_stmt 0 view .LVU86
+ 312 006e D2E7     		b	.L16
+ 313              	.L21:
+ 314              		.align	2
+ 315              	.L20:
+ 316 0070 00380140 		.word	1073821696
+ 317 0074 00080140 		.word	1073809408
+ 318              		.cfi_endproc
+ 319              	.LFE71:
+ 321              		.section	.text.HAL_UART_MspDeInit,"ax",%progbits
+ 322              		.align	1
+ 323              		.global	HAL_UART_MspDeInit
+ 324              		.syntax unified
+ 325              		.thumb
+ 326              		.thumb_func
+ 327              		.fpu softvfp
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 9
+
+
+ 329              	HAL_UART_MspDeInit:
+ 330              	.LVL16:
+ 331              	.LFB72:
  107:Core/Src/usart.c **** 
  108:Core/Src/usart.c **** void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 9
-
-
  109:Core/Src/usart.c **** {
- 327              		.loc 1 109 1 is_stmt 1 view -0
- 328              		.cfi_startproc
- 329              		@ args = 0, pretend = 0, frame = 0
- 330              		@ frame_needed = 0, uses_anonymous_args = 0
- 331              		.loc 1 109 1 is_stmt 0 view .LVU86
- 332 0000 08B5     		push	{r3, lr}
- 333              	.LCFI6:
- 334              		.cfi_def_cfa_offset 8
- 335              		.cfi_offset 3, -8
- 336              		.cfi_offset 14, -4
+ 332              		.loc 1 109 1 is_stmt 1 view -0
+ 333              		.cfi_startproc
+ 334              		@ args = 0, pretend = 0, frame = 0
+ 335              		@ frame_needed = 0, uses_anonymous_args = 0
+ 336              		.loc 1 109 1 is_stmt 0 view .LVU88
+ 337 0000 08B5     		push	{r3, lr}
+ 338              	.LCFI6:
+ 339              		.cfi_def_cfa_offset 8
+ 340              		.cfi_offset 3, -8
+ 341              		.cfi_offset 14, -4
  110:Core/Src/usart.c **** 
  111:Core/Src/usart.c ****   if(uartHandle->Instance==USART1)
- 337              		.loc 1 111 3 is_stmt 1 view .LVU87
- 338              		.loc 1 111 16 is_stmt 0 view .LVU88
- 339 0002 0268     		ldr	r2, [r0]
- 340              		.loc 1 111 5 view .LVU89
- 341 0004 074B     		ldr	r3, .L26
- 342 0006 9A42     		cmp	r2, r3
- 343 0008 00D0     		beq	.L25
- 344              	.LVL17:
- 345              	.L22:
+ 342              		.loc 1 111 3 is_stmt 1 view .LVU89
+ 343              		.loc 1 111 16 is_stmt 0 view .LVU90
+ 344 0002 0268     		ldr	r2, [r0]
+ 345              		.loc 1 111 5 view .LVU91
+ 346 0004 074B     		ldr	r3, .L26
+ 347 0006 9A42     		cmp	r2, r3
+ 348 0008 00D0     		beq	.L25
+ 349              	.LVL17:
+ 350              	.L22:
  112:Core/Src/usart.c ****   {
  113:Core/Src/usart.c ****   /* USER CODE BEGIN USART1_MspDeInit 0 */
  114:Core/Src/usart.c **** 
@@ -521,77 +526,77 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 1
  127:Core/Src/usart.c ****   /* USER CODE END USART1_MspDeInit 1 */
  128:Core/Src/usart.c ****   }
  129:Core/Src/usart.c **** }
- 346              		.loc 1 129 1 view .LVU90
- 347 000a 08BD     		pop	{r3, pc}
- 348              	.LVL18:
- 349              	.L25:
+ 351              		.loc 1 129 1 view .LVU92
+ 352 000a 08BD     		pop	{r3, pc}
+ 353              	.LVL18:
+ 354              	.L25:
  117:Core/Src/usart.c **** 
- 350              		.loc 1 117 5 is_stmt 1 view .LVU91
- 351 000c 064A     		ldr	r2, .L26+4
- 352 000e 9369     		ldr	r3, [r2, #24]
- 353 0010 23F48043 		bic	r3, r3, #16384
- 354 0014 9361     		str	r3, [r2, #24]
+ 355              		.loc 1 117 5 is_stmt 1 view .LVU93
+ 356 000c 064A     		ldr	r2, .L26+4
+ 357 000e 9369     		ldr	r3, [r2, #24]
+ 358 0010 23F48043 		bic	r3, r3, #16384
+ 359 0014 9361     		str	r3, [r2, #24]
  123:Core/Src/usart.c **** 
- 355              		.loc 1 123 5 view .LVU92
- 356 0016 4FF4C061 		mov	r1, #1536
- 357 001a 0448     		ldr	r0, .L26+8
- 358              	.LVL19:
- 123:Core/Src/usart.c **** 
- 359              		.loc 1 123 5 is_stmt 0 view .LVU93
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 10
+ 360              		.loc 1 123 5 view .LVU94
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 10
 
 
- 360 001c FFF7FEFF 		bl	HAL_GPIO_DeInit
- 361              	.LVL20:
- 362              		.loc 1 129 1 view .LVU94
- 363 0020 F3E7     		b	.L22
- 364              	.L27:
- 365 0022 00BF     		.align	2
- 366              	.L26:
- 367 0024 00380140 		.word	1073821696
- 368 0028 00100240 		.word	1073876992
- 369 002c 00080140 		.word	1073809408
- 370              		.cfi_endproc
- 371              	.LFE72:
- 373              		.comm	huart1,68,4
- 374              		.text
- 375              	.Letext0:
- 376              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
- 377              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
- 378              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
- 379              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
- 380              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 381              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 382              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 383              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 384              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
- 385              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 386              		.file 12 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
- 387              		.file 13 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
- 388              		.file 14 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eab
- 389              		.file 15 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
- 390              		.file 16 "Core/Inc/usart.h"
- 391              		.file 17 "Core/Inc/main.h"
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s 			page 11
+ 361 0016 4FF4C061 		mov	r1, #1536
+ 362 001a 0448     		ldr	r0, .L26+8
+ 363              	.LVL19:
+ 123:Core/Src/usart.c **** 
+ 364              		.loc 1 123 5 is_stmt 0 view .LVU95
+ 365 001c FFF7FEFF 		bl	HAL_GPIO_DeInit
+ 366              	.LVL20:
+ 367              		.loc 1 129 1 view .LVU96
+ 368 0020 F3E7     		b	.L22
+ 369              	.L27:
+ 370 0022 00BF     		.align	2
+ 371              	.L26:
+ 372 0024 00380140 		.word	1073821696
+ 373 0028 00100240 		.word	1073876992
+ 374 002c 00080140 		.word	1073809408
+ 375              		.cfi_endproc
+ 376              	.LFE72:
+ 378              		.comm	huart1,68,4
+ 379              		.text
+ 380              	.Letext0:
+ 381              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+ 382              		.file 3 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
+ 383              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 384              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 385              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 386              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 387              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 388              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 389              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 390              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 391              		.file 12 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 392              		.file 13 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 393              		.file 14 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eab
+ 394              		.file 15 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 395              		.file 16 "Core/Inc/usart.h"
+ 396              		.file 17 "Core/Inc/main.h"
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usart.c
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:16     .text.__io_putchar:00000000 $t
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:24     .text.__io_putchar:00000000 __io_putchar
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:54     .text.__io_putchar:00000014 $d
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:59     .text._write:00000000 $t
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:66     .text._write:00000000 _write
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:118    .text.MX_USART1_UART_Init:00000000 $t
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:125    .text.MX_USART1_UART_Init:00000000 MX_USART1_UART_Init
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:183    .text.MX_USART1_UART_Init:0000002c $d
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:16     .text.__io_putchar:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:24     .text.__io_putchar:00000000 __io_putchar
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:59     .text.__io_putchar:0000001c $d
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:64     .text._write:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:71     .text._write:00000000 _write
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:123    .text.MX_USART1_UART_Init:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:130    .text.MX_USART1_UART_Init:00000000 MX_USART1_UART_Init
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:188    .text.MX_USART1_UART_Init:0000002c $d
                             *COM*:00000044 huart1
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:189    .text.HAL_UART_MspInit:00000000 $t
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:196    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:311    .text.HAL_UART_MspInit:00000070 $d
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:317    .text.HAL_UART_MspDeInit:00000000 $t
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:324    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
-C:\Users\ADMINI~1\AppData\Local\Temp\ccJzAElw.s:367    .text.HAL_UART_MspDeInit:00000024 $d
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:194    .text.HAL_UART_MspInit:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:201    .text.HAL_UART_MspInit:00000000 HAL_UART_MspInit
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:316    .text.HAL_UART_MspInit:00000070 $d
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:322    .text.HAL_UART_MspDeInit:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:329    .text.HAL_UART_MspDeInit:00000000 HAL_UART_MspDeInit
+C:\Users\ADMINI~1\AppData\Local\Temp\cccvPnwN.s:372    .text.HAL_UART_MspDeInit:00000024 $d
 
 UNDEFINED SYMBOLS
 HAL_UART_Init

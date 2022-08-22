@@ -1,5 +1,6 @@
 #MicroXplorer Configuration settings - do not modify
-FREERTOS.IPParameters=Tasks01
+FREERTOS.IPParameters=Tasks01,Mutexes01
+FREERTOS.Mutexes01=myMutex01,Dynamic,NULL
 FREERTOS.Tasks01=defaultTask,24,128,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL
 File.Version=6
 GPIO.groupedBy=

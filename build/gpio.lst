@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 1
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccNOkGFQ.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -24,7 +24,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 1
   21              		.thumb_func
   22              		.fpu softvfp
   24              	MX_GPIO_Init:
-  25              	.LFB65:
+  25              	.LFB68:
   26              		.file 1 "Core/Src/gpio.c"
    1:Core/Src/gpio.c **** /* USER CODE BEGIN Header */
    2:Core/Src/gpio.c **** /**
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 1
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
   32:Core/Src/gpio.c **** 
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 2
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccNOkGFQ.s 			page 2
 
 
   33:Core/Src/gpio.c **** /* USER CODE END 1 */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 1
   64              		.loc 1 49 3 view .LVU10
   65              		.loc 1 49 3 view .LVU11
   66 0022 9969     		ldr	r1, [r3, #24]
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 3
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccNOkGFQ.s 			page 3
 
 
   67 0024 41F02001 		orr	r1, r1, #32
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 1
  111 005e 0793     		str	r3, [sp, #28]
   60:Core/Src/gpio.c ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
  112              		.loc 1 60 3 is_stmt 1 view .LVU30
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 4
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccNOkGFQ.s 			page 4
 
 
  113 0060 04A9     		add	r1, sp, #16
@@ -199,7 +199,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 1
  126 006c 00100240 		.word	1073876992
  127 0070 00100140 		.word	1073811456
  128              		.cfi_endproc
- 129              	.LFE65:
+ 129              	.LFE68:
  131              		.text
  132              	.Letext0:
  133              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
@@ -207,16 +207,24 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 1
  135              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
  136              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  137              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 138              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 139              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s 			page 5
+ 138              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 139              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 140              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 141              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 142              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 143              		.file 12 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 144              		.file 13 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 145              		.file 14 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eab
+ 146              		.file 15 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 147              		.file 16 "Core/Inc/usart.h"
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccNOkGFQ.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s:16     .text.MX_GPIO_Init:00000000 $t
-C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s:24     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-C:\Users\ADMINI~1\AppData\Local\Temp\cczeEiUb.s:126    .text.MX_GPIO_Init:0000006c $d
+C:\Users\ADMINI~1\AppData\Local\Temp\ccNOkGFQ.s:16     .text.MX_GPIO_Init:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\ccNOkGFQ.s:24     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\ADMINI~1\AppData\Local\Temp\ccNOkGFQ.s:126    .text.MX_GPIO_Init:0000006c $d
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin

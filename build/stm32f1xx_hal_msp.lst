@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 1
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvbAIe.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -24,7 +24,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 1
   21              		.thumb_func
   22              		.fpu softvfp
   24              	HAL_MspInit:
-  25              	.LFB65:
+  25              	.LFB68:
   26              		.file 1 "Core/Src/stm32f1xx_hal_msp.c"
    1:Core/Src/stm32f1xx_hal_msp.c **** /* USER CODE BEGIN Header */
    2:Core/Src/stm32f1xx_hal_msp.c **** /**
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 1
   30:Core/Src/stm32f1xx_hal_msp.c **** /* USER CODE END TD */
   31:Core/Src/stm32f1xx_hal_msp.c **** 
   32:Core/Src/stm32f1xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 2
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvbAIe.s 			page 2
 
 
   33:Core/Src/stm32f1xx_hal_msp.c **** /* USER CODE BEGIN Define */
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 1
   44 0008 42F00102 		orr	r2, r2, #1
   45 000c 9A61     		str	r2, [r3, #24]
   46              		.loc 1 69 3 view .LVU4
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 3
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvbAIe.s 			page 3
 
 
   47 000e 9A69     		ldr	r2, [r3, #24]
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 1
   80:Core/Src/stm32f1xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 1 */
   81:Core/Src/stm32f1xx_hal_msp.c **** 
   82:Core/Src/stm32f1xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 4
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvbAIe.s 			page 4
 
 
   83:Core/Src/stm32f1xx_hal_msp.c **** }
@@ -194,7 +194,7 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 1
  100 004c 00100240 		.word	1073876992
  101 0050 00000140 		.word	1073807360
  102              		.cfi_endproc
- 103              	.LFE65:
+ 103              	.LFE68:
  105              		.text
  106              	.Letext0:
  107              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include\
@@ -202,16 +202,24 @@ ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 1
  109              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
  110              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  111              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 112              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 113              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
-ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s 			page 5
+ 112              		.file 7 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 113              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 114              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 115              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 116              		.file 11 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 117              		.file 12 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 118              		.file 13 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\lib\\gcc\\arm-none-eab
+ 119              		.file 14 "c:\\program files (x86)\\gnu tools arm embedded\\9 2019-q4-major\\arm-none-eabi\\include
+ 120              		.file 15 "Core/Inc/usart.h"
+ 121              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h"
+ARM GAS  C:\Users\ADMINI~1\AppData\Local\Temp\ccIvbAIe.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f1xx_hal_msp.c
-C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s:16     .text.HAL_MspInit:00000000 $t
-C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
-C:\Users\ADMINI~1\AppData\Local\Temp\cc7faSJO.s:100    .text.HAL_MspInit:0000004c $d
+C:\Users\ADMINI~1\AppData\Local\Temp\ccIvbAIe.s:16     .text.HAL_MspInit:00000000 $t
+C:\Users\ADMINI~1\AppData\Local\Temp\ccIvbAIe.s:24     .text.HAL_MspInit:00000000 HAL_MspInit
+C:\Users\ADMINI~1\AppData\Local\Temp\ccIvbAIe.s:100    .text.HAL_MspInit:0000004c $d
 
 UNDEFINED SYMBOLS
 HAL_NVIC_SetPriority

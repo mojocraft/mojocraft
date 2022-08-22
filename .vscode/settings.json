@@ -4,6 +4,13 @@
         "multibutton.h": "c",
         "main.h": "c",
         "stm32f1xx_hal.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "freertos.h": "c",
+        "freertosconfig.h": "c",
+        "projdefs.h": "c",
+        "portable.h": "c",
+        "cmsis_os.h": "c",
+        "stddef.h": "c",
+        "task.h": "c"
     }
 }
